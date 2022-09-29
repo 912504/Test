@@ -39,7 +39,7 @@ const mods = {
     };
 
             modloader.init();
-            loadModUrl("/ModLoader/V1/multiplayer.js");
+            loadModUrl("/ModLoader/V1/AIOTASTOOLS.js");
         }
     }
 
