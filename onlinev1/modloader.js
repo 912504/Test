@@ -1,6 +1,5 @@
 const mods = {
-    "gui": "/ovo/onlinev1/ModLoader/V1/gui.js",
-    "multiplayer": "/ovo/onlinev1/ModLoader/V1/multiplayerSKYPORTED.js",
+    "AIOTASTOOLS": "/Test/onlinev1/ModLoader/V1/AIOTASTOOLS.js",
     
   };
   
