@@ -2259,8 +2259,8 @@
   );
   document.addEventListener("keydown", (event) => {
     if (event.code === "KeyA") {
-      ovoTasTools.timescale = 0.2
-        notify("timescale set to 0.2");
+      ovoTasTools.timescale = 0.001
+        notify("timescale set to 0.001");
     }
     if (event.code === "KeyS") {
       ovoTasTools.timescale = 0.05
@@ -2287,8 +2287,8 @@
         notify("timescale set to 2");
     }
     if (event.code === "KeyX") {
-      ovoTasTools.timescale = 0.5
-        notify("timescale set to 0.5");
+      ovoTasTools.timescale = 0.00001
+        notify("timescale set to 0.00001");
     }
     if (event.code === "KeyC") {
       ovoTasTools.timescale = 0.005
