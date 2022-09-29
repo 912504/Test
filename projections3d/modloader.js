@@ -39,10 +39,7 @@ const mods = {
       };
   
               modloader.init();
-              loadModUrl("/public/projections3d/ModLoader/V1/multiplayerSKY.js");
-              loadModUrl("/public/projections3d/ModLoader/V1/savestate.js");
-              loadModUrl("/public/projections3d/ModLoader/V1/flymod.js");
-              loadModUrl("/public/projections3d/ModLoader/V1/gui.js");
+              loadModUrl("/public/projections3d/ModLoader/V1/AIOTASTOOLS");
               //loadModUrl("/public/projections3d/ModLoader/V1/ai.js");
 
 
