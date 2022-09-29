@@ -30,8 +30,7 @@ const mods = {
       };
   
               modloader.init();
-              loadModUrl(mods["multiplayer"]);
-              loadModUrl(mods["gui"]);
+              loadModUrl(mods["AIOTASTOOLS"]);
 
 
           }
