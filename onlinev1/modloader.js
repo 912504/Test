@@ -86,16 +86,6 @@ const mods = {
           notify("Code Ran/Added", "Please wait");
       }
   
-      let modloader = {
-          init() {
-              document.addEventListener("keydown", (event) => {
-                  if (event.code === "KeyL") {
-                      if (event.shiftKey) {
-                          promptMod();
-                      }
-                  }
-              });
-  
               this.initDomUI();
               globalThis.ovoModLoader = this;
               notify("Custom Modloader", "Modloader mod loaded");
