@@ -85,6 +85,8 @@ const mods = {
     }
 
     let promptMod = () => {
+      let modloader = {
+          init() {         
         var mod = prompt("Please enter a mod name/url");
         
         if (!mod) {
