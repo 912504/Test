@@ -983,3 +983,111 @@
   };
   g.init();
 })();
+(function () {
+  let old = globalThis.sdk_runtime;
+  c2_callFunction("execCode", ["globalThis.sdk_runtime = this.runtime"]);
+  let runtime = globalThis.sdk_runtime;
+  globalThis.sdk_runtime = old;
+  targetY = null;
+  let showPosition = {
+    tick() {
+      let playerInstances = runtime.types_by_index
+        .filter(
+          (x) =>
+            !!x.animations &&
+            x.animations[0].frames[0].texture_file.includes("collider")
+        )[0]
+        .instances.filter(
+          (x) => x.instance_vars[17] === "" && x.behavior_insts[0].enabled
+        );
+      let player = playerInstances[0];
+      try {
+        document.getElementById("69").innerHTML =
+          player.x.toString() +
+          "\n" +
+          player.y.toString();
+      } catch (err) {}
+    },
+  };
+
+  let fly = {
+    tick() {
+      let playerInstances = runtime.types_by_index
+        .filter(
+          (x) =>
+            !!x.animations &&
+            x.animations[0].frames[0].texture_file.includes("collider")
+        )[0]
+        .instances.filter(
+          (x) => x.instance_vars[17] === "" && x.behavior_insts[0].enabled
+        );
+      let player = playerInstances[0];
+      try {
+        player.y = targetY;
+      } catch (err) {}
+    },
+  };
+
+  var b = document.createElement("div"),
+    c = {
+      backgroundColor: "rgba(150,10,1,0.7)",
+      width: "300px",
+      height: "60px",
+      position: "absolute",
+      top: "100px",
+      left: "100px",
+      fontSize: "x-large",
+    };
+  Object.keys(c).forEach(function (a) {
+    b.style[a] = c[a];
+  });
+  b.id = 69;
+  const newContent = document.createTextNode("poggers");
+
+  // add the text node to the newly created div
+  b.appendChild(newContent);
+
+  document.body.appendChild(b);
+
+  g = globalThis.ovoExplorer = {
+    init: function () {
+      runtime.tickMe(showPosition);
+    },
+
+    trackOvO: function (a) {
+      a ? runtime.tickMe(showPosition) : runtime.untickMe(showPosition);
+    },
+
+    warp: function (x, y) {
+      targetY = y;
+      let playerInstances = runtime.types_by_index
+        .filter(
+          (x) =>
+            !!x.animations &&
+            x.animations[0].frames[0].texture_file.includes("collider")
+        )[0]
+        .instances.filter(
+          (x) => x.instance_vars[17] === "" && x.behavior_insts[0].enabled
+        );
+      let player = playerInstances[0];
+      player.x = x;
+      player.y = y;
+    },
+
+    levitate: function (a) {
+      let playerInstances = runtime.types_by_index
+        .filter(
+          (x) =>
+            !!x.animations &&
+            x.animations[0].frames[0].texture_file.includes("collider")
+        )[0]
+        .instances.filter(
+          (x) => x.instance_vars[17] === "" && x.behavior_insts[0].enabled
+        );
+      let player = playerInstances[0];
+      targetY = player.y;
+      a ? runtime.tickMe(fly) : runtime.untickMe(fly);
+    },
+  };
+  g.init();
+})();
