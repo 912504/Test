@@ -464,8 +464,8 @@
   );
   document.addEventListener("keydown", (event) => {
     if (event.code === "KeyA") {
-      ovoTasTools.timescale = 0.2
-        notify("timescale set to 0.2");
+      ovoTasTools.timescale = 1.003
+        notify("Frame Fixed");
     }
     if (event.code === "KeyS") {
       ovoTasTools.timescale = 0.05
