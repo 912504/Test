@@ -447,7 +447,7 @@
   let runtime = globalThis.sdk_runtime;
   globalThis.sdk_runtime = old;
 
-  let notify = (text, title = "yooooo", image = "./speedrunner.png") => {
+  let notify = (text, title = "nah jit trippin", image = "./speedrunner.png") => {
     cr.plugins_.sirg_notifications.prototype.acts.AddSimpleNotification.call(
       runtime.types_by_index.find(
         (type) => type.plugin instanceof cr.plugins_.sirg_notifications
@@ -465,7 +465,15 @@
   document.addEventListener("keydown", (event) => {
     if (event.code === "KeyA") {
       ovoTasTools.timescale = 1.003
-        notify("Frame Fixed");
+        notify("Frame Fixed to 1.003");
+    }
+        if (event.code === "KeyM") {
+      ovoTasTools.timescale = 1.002
+        notify("Frame Fixed to 1.002");
+    }
+        if (event.code === "KeyA") {
+      ovoTasTools.timescale = 1.004
+        notify("Frame Fixed to 1.004");
     }
     if (event.code === "KeyS") {
       ovoTasTools.timescale = 0.05
