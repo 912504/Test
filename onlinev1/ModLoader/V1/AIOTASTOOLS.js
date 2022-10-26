@@ -471,7 +471,7 @@
       ovoTasTools.timescale = 1.002
         notify("Frame Fixed to 1.002");
     }
-        if (event.code === "KeyA") {
+        if (event.code === "KeyN") {
       ovoTasTools.timescale = 1.004
         notify("Frame Fixed to 1.004");
     }
