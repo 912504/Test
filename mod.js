@@ -20,7 +20,7 @@
     "timescale shortcut mod loaded"
   );
   document.addEventListener("keydown", (event) => {
-    if (event.code === "KeyA") {
+    if (event.code === "KeyO") {
       ovoTasTools.timescale = 1.1
         notify("Frame Fixed to 1.1");
     }
